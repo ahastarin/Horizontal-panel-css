@@ -56,13 +56,15 @@
       position: relative;
       width: 100%;
       height: 560px;
-      background-image: url(../../assets/images/header/img-header-malang.jpg);
+      background-image: url(../../assets/images/header/img-header-malang.jpg) !important;
       background-size: cover;
       background-position: center;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 40px;
+      -moz-appearace:none;
+      -webkit-appearace:none;
       appearance: none;
       .header-content{
           color: white;

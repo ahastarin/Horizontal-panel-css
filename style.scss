@@ -58,7 +58,7 @@
       width: 100%;
       height: 560px;
       background-image: url(../../assets/images/header/img-header-malang-desktop.jpg) !important;
-      @include vendor-prefix('background-image','100%');
+      @include vendor-prefix('background-size','100%');
       background-position: center;
       background-repeat: no-repeat;
       display: flex;

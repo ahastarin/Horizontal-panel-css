@@ -142,7 +142,9 @@ header {
   height: 560px;
   background-image: url(../../assets/images/header/img-header-malang.jpg) !important;
   background-size: cover;
+  background-attachment: scroll;
   background-position: center;
+  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

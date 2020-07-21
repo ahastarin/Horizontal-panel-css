@@ -1,0 +1,263 @@
+@import 'variable';
+@import 'typography';
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+      @include font-size($media-medium);
+  }
+
+  nav{
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+  }
+
+  .nav-container{
+      width: 90%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      align-items: center;
+  }
+
+  .logo{
+    width: 176px;
+    height: 38px;
+  }
+  .hamburger-button{
+    width: 2.5rem;
+    height: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .hamburger{
+    height: 0.125rem;
+    width: 100%;
+    background-color: #1a1a1a;
+  }
+
+  .header-overlay{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 20%;
+      position: absolute;
+  }
+
+  header{
+      position: relative;
+      width: 100%;
+      height: 560px;
+      background-image: url(../../assets/images/header/img-header-malang.jpg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+      .header-content{
+          color: white;
+          z-index: 1;
+      }
+      h1{
+          width: 90%;
+          text-align: center;
+          margin: 0 auto;
+          margin-bottom: 60px;
+      }
+
+      .header-button{
+          width: 135px;
+          height: 35px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          opacity: 90%;
+      }
+      
+      a{
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        @include gradient(to bottom right , $gradient-button-color);
+        font-family: 'montserrat semibold';
+        letter-spacing: 1px;
+        }
+
+    }
+
+    main{
+        .main-head-container{
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .best-hotel-title-container{
+            display: flex;
+            margin-top: 40px;
+            margin-bottom: 20px ;
+        }
+        .best-hotel-title{
+            text-align: left;
+            margin-right: 10px;
+            margin-left: 5%;
+            font-family: 'montserrat semibold';
+        }
+
+        .hotel-container{
+            width: 230px;
+            height: 180px;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #f3f3f3;
+            box-shadow: 6px 6px 5px #19007421;
+        }
+
+        .hotel-image{
+            width: 100%;
+            height: 125px;
+            position: relative;
+        }
+
+        .hotel-image-content{
+            position: absolute;
+            left: 5%;
+            bottom: 5%;
+            color: white;
+        }
+
+        .hotel-image-content p{
+            font-family: 'montserrat semibold';
+            letter-spacing: 1.4px;
+            font-size:  0.875rem;
+            margin-top: 5px;
+        }
+
+        .hotel-image-content .hotel-rating img{
+            width: 12px;
+            height: 12px;
+            margin-right: 8px;
+        }
+
+        .hotel-image-overlay{
+            width: 100%;
+            height: 90%;
+            @include gradient(to top, $gradient-image-overlay);
+            position: absolute;
+            bottom: 0;
+        }
+
+        img:not(.check){
+            width: 100%;
+            height: 100%;
+        }
+
+        .hotel-content{
+            width: 100%;
+            height: 55px;
+            display: flex;
+            width: 90%;
+            margin: auto;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hotel-content p{
+            font-family: 'montserrat semibold';
+            font-size: 0.875rem;
+            letter-spacing: 1.4px;
+        }
+
+        .book-hotel-button a{   
+            width: 60px;
+            height: 25px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            @include gradient(to right , $gradient-button-color);
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'montserrat regular';
+            letter-spacing: .5px;
+        }
+
+        .best-hotel-scroll-wrapper{
+            margin-bottom: 40px;
+            width: 100%;
+            white-space: nowrap;
+            overflow-x: visible;
+            overflow-y: hidden;
+        }
+
+        .best-hotel-scroll-wrapper::-webkit-scrollbar {   
+             display: none;
+        }
+
+        .hotel-wrapper{
+            display: inline-flex;
+        }
+
+        .hotel-wrapper + .hotel-wrapper {
+            margin: 10px;
+        }
+
+        .hotel-wrapper.first{
+            margin-left: 5%;
+        }
+
+        .hotel-wrapper.last{
+            margin-right: 5%;
+        }
+    }
+
+    @media (min-width: 800px){
+
+        .best-hotel-scroll-wrapper{
+            width: 90% !important;
+            display: grid !important;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 15px;
+            margin: 0 auto;
+            overflow-x: visible !important;
+            overflow-y: visible !important;
+        }
+
+        .hotel-wrapper{
+            display: block !important;
+            margin: 0 !important;
+            height: 310px;
+        }
+
+        .hotel-container{
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .hotel-image{
+            width: 100%;
+            height: 230px !important;
+        }
+
+        .hotel-content{
+            height: 80px !important;
+        }
+    }
+
+    @media (min-width: 1000px){
+        .best-hotel-scroll-wrapper{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+

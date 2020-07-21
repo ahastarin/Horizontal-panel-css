@@ -1,0 +1,52 @@
+$gradient-button-color: #3154ff, #0090ff;
+$gradient-image-overlay: #000000 , #00000000;
+
+$media-medium:800px;
+$media-small: 360px;
+
+@mixin gradient($direction , $color) {
+    background: -webkit-linear-gradient($direction, $color);
+    background: -moz-linear-gradient($direction, $color);
+    background: -o-linear-gradient($direction, $color);
+    background: linear-gradient($direction, $color);
+}
+
+@mixin font-size($value){
+   @media(min-width:$value){
+       @if($value=$media-medium){
+        h1{
+            font-size: 3rem;
+            font-family: 'merriweather bold';
+            text-align: center;
+            line-height: 80px;
+        }
+        h2{
+            font-size: 2.5rem;
+            font-family: 'merriweather bold';
+            text-align: center;
+        }
+        h3{
+            font-size: 1.75rem;
+            font-family: 'montserrat regular';
+        }
+       }
+
+       @if($value=$media-small){
+        h1{
+            font-size: 3rem;
+            font-family: 'merriweather bold';
+            text-align: center;
+            line-height: 80px;
+        }
+        h2{
+            font-size: 2.5rem;
+            font-family: 'merriweather bold';
+            text-align: center;
+        }
+        h3{
+            font-size: 1.75rem;
+            font-family: 'montserrat regular';
+        }
+       }
+   }
+}
